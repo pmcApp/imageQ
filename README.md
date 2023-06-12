@@ -8,6 +8,6 @@ colorspace_factor = np.random.choice([0 - 179], 1)[0]
         colorspace_saturation = random.choice([0 - 255], 1)[0]
 ```
 
-![img_1.png](img_1.png)
+![img.png](img.png)
 
 Thanks to the images used `_dataset_`, the archived images maintain their quality and the images are saved in the background within the system.
