@@ -15,7 +15,6 @@ from sqlalchemy import true
 def ResizeCrop(image_orig: object, image_size: object, div_factor: object) -> object :
     pass
 
-
 def colorspace(img, val) :
     if val == 0 :
         img.colorspace = transforms.RandomColor(a=1.0)(img)
