@@ -29,7 +29,7 @@ class image_data(Dataset) :
         self.image = dataclasses.image_data(image)
         self.file_path = file_path
 
-    def __items__(self, item, idx=type, image_orig=self.image) :
+    def __items__(self, item, idx=type, image_orig=self.image):
         img_name = self.fls.iloc[idx]['File_names'].rstrip()
         image_opened = Image.open(img_name)
 
