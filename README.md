@@ -1,4 +1,4 @@
-# 🏗️ image-quality
+# 🏗️ imageQ
 imageQ allows you to get a clearer image when using the images on the system. It has been made more advantageous for use on Docker.
 
 ## Color Values
