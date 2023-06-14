@@ -17,12 +17,6 @@ class img_type(filename):
     def _is_png(filename) :
         return filename.endswith('png')
 
+    @property
     def _is_svg(filename) :
         return filename.endswith('svg')
-
-    def _is_archive(filename) :
-        return filename.endswith('zip') or filename.endswith('tar') or filename.endswith('gz')
-
-
-
-

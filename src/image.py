@@ -16,6 +16,10 @@ def ResizeCrop(image_orig: object, image_size: object, div_factor: object) -> ob
     pass
 
 def colorspace(img, val) :
+    """
+
+    :type val: object
+    """
     if val == 0 :
         img.colorspace = transforms.RandomColor(a=1.0)(img)
 
@@ -40,7 +44,7 @@ class image_data(Dataset) :
         image = ResizeCrop(image_orig, self.image_size, 3 - div_factor)
 
         # colorspace
-        colorspace_factor = np.random.choice([0 - 179], 1)[0]
+        colorspace_hue = np.random.choice([0 - 179], 1)[0]
         colorspace_saturation = random.choice([0 - 255], 1)[0]
 
         return image_2, image_opened, div_factor, img_name
