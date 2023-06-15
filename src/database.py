@@ -13,11 +13,11 @@ class database_images(image_data) :
     def db_images(self) :
         self.db_images = {
             'image_id' : sort_values(by=['id']),
-            'image_name' : 'image_name',
-            'image_path' : 'image_path',
-            'image_type' : 'image_type',
-            'image_size' : 'image_size',
-            'image_width' : 'image_width',
-            'image_height' : 'image_height'
+            'image_name' : 'image_%s' % self.db_images[self.db_name],
+            'image_path' : 'image_%s' % self.db_images[self.db_path],
+            'image_type' : 'image_%s' % self.db_images[self.db_type],
+            'image_size' : 'image_%s' % self.db_images[self.db_size],
+            'image_width' : 'image_%s' % self.db_images[self.db_width],
+            'image_height' : 'image_%s' % self.db_images[self.db_height]
         }
         return self.db_images
