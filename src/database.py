@@ -12,6 +12,9 @@ class database_images(image_data) :
         super().__init__(image, file_path)
         self.db_images = database_images
 
+    def __repr__(self) :
+        return f"{self.__class__.__name__}({self.image}, {self.file_path})"
+
     def db_images(self) -> dict[str, Union[Optional[str], Any]] :
         self.db_images = {
             'image_id' : sort_values(by=['id']),
