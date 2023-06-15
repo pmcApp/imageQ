@@ -15,24 +15,25 @@ from sqlalchemy import true
 def ResizeCrop(image_orig: object, image_size: object, div_factor: object) -> object :
     pass
 
-def colorspace(img, val):
+
+def colorspace(img, val) :
     """
 
     :type val: object
     """
-    if val == 0:
+    if val == 0 :
         img.colorspace = transforms.RandomColor(a=1.0)(img)
 
-    elif val == 1:
+    elif val == 1 :
         return img, val
 
 
-class image_data(Dataset):
-    def __init__(self, image, file_path=(512, 512)):
+class image_data(Dataset) :
+    def __init__(self, image, file_path=(512, 512)) :
         self.image = dataclasses.image_data(image)
         self.file_path = file_path
 
-    def __items__(self, item, idx=type, image_orig=self.image):
+    def __items__(self, item, idx=type, image_orig=self.image) :
         img_name = self.fls.iloc[idx]['File_names'].rstrip()
         image_opened = Image.open(img_name)
 
