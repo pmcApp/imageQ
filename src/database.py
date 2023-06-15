@@ -8,7 +8,7 @@ def sort_values(by) :
 class database_images(image_data) :
     def __init__(self, image, file_path=(512, 512)) :
         super().__init__(image, file_path)
-        self.db_images = None
+        self.db_images = database_images
 
     def db_images(self) :
         self.db_images = {
