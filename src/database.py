@@ -1,3 +1,5 @@
+from typing import Dict, Union, Any, Optional
+
 from src.image import image_data
 
 
@@ -10,7 +12,7 @@ class database_images(image_data) :
         super().__init__(image, file_path)
         self.db_images = database_images
 
-    def db_images(self) :
+    def db_images(self) -> dict[str, Union[Optional[str], Any]] :
         self.db_images = {
             'image_id' : sort_values(by=['id']),
             'image_name' : 'image_%s' % self.db_images[self.db_name],
