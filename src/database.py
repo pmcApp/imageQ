@@ -1,5 +1,7 @@
 from typing import Dict, Union, Any, Optional
 
+from sqlalchemy.testing import db
+
 from src.image import image_data
 
 
@@ -8,8 +10,8 @@ def sort_values(by) :
 
 
 class database_images(image_data) :
-    def __init__(self, image, file_path=(512, 512)) :
-        super().__init__(image, file_path)
+    def __init__(self, image, image_data=db.ImageData) :
+        super().__init__(image, image_data)
         self.db_images = database_images
 
     def __repr__(self) :
