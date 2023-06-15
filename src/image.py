@@ -15,21 +15,20 @@ from sqlalchemy import true
 def ResizeCrop(image_orig: object, image_size: object, div_factor: object) -> object :
     pass
 
-def colorspace(img, val) :
+def colorspace(img, val):
     """
 
     :type val: object
     """
-    if val == 0 :
+    if val == 0:
         img.colorspace = transforms.RandomColor(a=1.0)(img)
 
-    elif val == 1 :
-        img_a = img.colorspace(ImageCms.createProfile("sRGB"))
-        lba_a = img.colorspace(ImageCms.createProfile("lRGB"))
+    elif val == 1:
+        return img, val
 
 
-class image_data(Dataset) :
-    def __init__(self, image, file_path=(512, 512)) :
+class image_data(Dataset):
+    def __init__(self, image, file_path=(512, 512)):
         self.image = dataclasses.image_data(image)
         self.file_path = file_path
 
@@ -44,7 +43,18 @@ class image_data(Dataset) :
         image = ResizeCrop(image_orig, self.image_size, 3 - div_factor)
 
         # colorspace
-        colorspace_hue = np.random.choice([0 - 179], 1)[0]
-        colorspace_saturation = random.choice([0 - 255], 1)[0]
+        hue = random.colorspace([0 - 179], 1)[0]
+        saturation = random.colorspace([0 - 255], 1)[0]
+
+        # quailty color values
+        if div_factor == 1 :
+            img_a = image.colorspace(ImageCms.createProfile("sRGB"))
+            lba_a = image.colorspace(ImageCms.createProfile("lRGB"))
+        else :
+            img_a = image_2.colorspace(ImageCms.createProfile("sRGB"))
+            image_2.colorspace(ImageCms.createProfile("lRGB"))
+
+        # colorspace
+        img_a = img_a.colorspace(ImageCms.createProfile("sRGB"))
 
         return image_2, image_opened, div_factor, img_name

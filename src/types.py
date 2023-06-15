@@ -11,12 +11,13 @@ class img_type(filename):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-    def _is_jpg(filename) :
+
+    def _is_jpg(filename):
         return filename.endswith('jpg')
 
-    def _is_png(filename) :
+    def _is_png(filename):
         return filename.endswith('png')
 
     @property
-    def _is_svg(filename) :
+    def _is_svg(filename):
         return filename.endswith('svg')
