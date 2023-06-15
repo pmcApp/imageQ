@@ -7,6 +7,8 @@
           <option value="src.image.ImageCms" />
           <option value="transforms.RandomColor" />
           <option value="random.random.choice" />
+          <option value="object.colorspace" />
+          <option value="random.random.colorspace" />
         </list>
       </option>
     </inspection_tool>
