@@ -22,11 +22,11 @@ class database_images(image_data) :
     def db_images(self) -> dict[str, Union[Optional[str], Any]] :
         self.db_images = {
             'image_id': sort_values(by=['id']),
-            'image_name': 'image_%s' % self.db_images[self.db_name],
-            'image_path': 'image_%s' % self.db_images[self.db_path],
-            'image_type': 'image_%s' % self.db_images[self.db_type],
-            'image_size': 'image_%s' % self.db_images[self.db_size],
-            'image_width': 'image_%s' % self.db_images[self.db_width],
-            'image_height': 'image_%s' % self.db_images[self.db_height]
+            'image_name': 'image_%s' % self.db_images[self.db_images[self.images]],
+            'image_path': 'image_%s' % self.db_images[self.db_path[self.path]],
+            'image_type': 'image_%s' % self.db_images[self.db_type[self.type]],
+            'image_size': 'image_%s' % self.db_images[self.db_size[self.size]],
+            'image_width': 'image_%s' % self.db_images[self.db_width[self.width]],
+            'image_height': 'image_%s' % self.db_images[self.db_height[self.height]]
         }
         return self.db_images
