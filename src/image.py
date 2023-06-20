@@ -16,9 +16,10 @@ def ResizeCrop(image_orig: object, image_size: object, div_factor: object) -> ob
     pass
 
 
-def colorspace(img, val) :
+def colorspace(img, val):
     """
 
+    :param img:
     :type val: object
     """
     if val == 0 :

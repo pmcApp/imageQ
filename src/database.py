@@ -5,7 +5,7 @@ from sqlalchemy.testing import db
 from src.image import image_data
 
 
-def sort_values(by) :
+def sort_values(by):
     pass
 
 
