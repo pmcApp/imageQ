@@ -1,2 +1,4 @@
-numpy~=1.24.3
-SQLAlchemy~=1.4.48
+numpy==1.25.0
+SQLAlchemy==2.0.16
+self~=2020.12.3
+transforms~=0.1

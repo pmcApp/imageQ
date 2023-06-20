@@ -2,14 +2,15 @@ import dataclasses
 from importlib.resources import Resource
 from random import random
 
-import Dataset as Dataset
-import Rectangle as Rectangle
+
 import numpy as np
 import self as self
 import transforms as transforms
 from tkinter import Image
 
 from sqlalchemy import true
+
+from src.database import database_images
 
 
 def ResizeCrop(image_orig: object, image_size: object, div_factor: object) -> object :
@@ -29,7 +30,7 @@ def colorspace(img, val):
         return img, val
 
 
-class image_data(Dataset) :
+class image_data(database_images):
     def __init__(self, image, file_path=(512, 512)) :
         self.image = dataclasses.image_data(image)
         self.file_path = file_path
