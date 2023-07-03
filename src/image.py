@@ -13,6 +13,7 @@ from sqlalchemy import true
 from src.database import database_images
 
 
+
 def ResizeCrop(image_orig: object, image_size: object, div_factor: object) -> object :
     pass
 
